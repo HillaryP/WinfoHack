@@ -348,6 +348,14 @@ form {
     color:#207cca;
 }
 
+.btn-search {
+    padding:8px 15px;
+    background-color: #545E70;
+    border-radius: 0px;
+    opacity: 0.5;
+    color: white;
+}
+
 /*Services*/
 .services {
     padding: 50px 0;
