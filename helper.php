@@ -120,11 +120,6 @@
 		    $response = json_decode(search($term, $location));
 		    $business_id = $response->businesses[0]->id;
 		    $response = get_business($business_id);
-		    echo $response;
+		    return $response;
 		}
-
-		$term = $_POST['business'];
-		$location = $_POST['loc'];
-
-		query_api($term, $location);
 ?>
