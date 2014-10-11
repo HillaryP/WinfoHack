@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Washed-Up</title>
+	</head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>	
+	<body>
+		<h1>Washed-Up</h1>
+
+		<iframe width="600" height="600" id="map">
+		</iframe>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    //$("#map").googleMap({
+	var url = "http://flood.firetree.net/?ll=29.9667,-90.0500&zoom=9&m=9&type=hybrid";
+	$("#map").attr("src", url)
+    //  coords: [48.895651, 2.290569], // Map center (optional)s
+    //});
+  });
+</script>
+
+	</body>
+</html>
