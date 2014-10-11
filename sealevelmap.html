@@ -9,15 +9,22 @@
 		<iframe width="600" height="600" id="map">
 		</iframe>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    //$("#map").googleMap({
-	var url = "http://flood.firetree.net/?ll=29.9667,-90.0500&zoom=9&m=9&type=hybrid";
-	$("#map").attr("src", url)
-    //  coords: [48.895651, 2.290569], // Map center (optional)s
-    //});
-  });
-</script>
-
+		<script type="text/javascript">
+  			$(document).ready(function() {
+			  	var base = "http://flood.firetree.net/?ll=";
+			  	var lon = "29.9667";
+			  	var comma = ",";
+			  	var lat = "-90.0500";
+			  	var and = "&";
+			  	var zequal = "z=";
+			  	var z = "8";
+			  	var mequal = "m=";
+			  	var m = "20";
+			  	var type = "type=hybrid";
+			  	var url = base.concat(lon,comma,lat,and,zequal,z,and,mequal,m,and,type)
+				//var url = "http://flood.firetree.net/?ll=29.9667,-90.0500&zoom=9&m=9&type=hybrid";
+				$("#map").attr("src", url)
+			  });
+		</script>
 	</body>
 </html>
