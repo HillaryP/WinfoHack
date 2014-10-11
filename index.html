@@ -17,17 +17,19 @@
 		<!-- Header -->
 	    <header id="top" class="header">
 	        <div class="text-vertical-center">
-	            <h1>washed-up</h1>
-	            <h3>What's happening to your favorite businesses?</h3>
+	        	<img width="545" src="img/logo.png">
+	            <p class="heading1">WASHED-UP</p>
+	            <p class="heading3">WHAT'S HAPPENING TO YOUR FAVORITE PLACES?</h3>
 	            <br>
 <!-- 	            <form >
                     <input type="text" placeholder="Search..." required>
                     <input type="button" value="Search">
 				</form> -->
 
-				<form  role="search">
+				<form action="helper.php" role="search">
 				    <div class="form-group">
-				        <input type="text" class="form-control search" placeholder="Search">
+				        <input type="text" name="business" class="form-control search" placeholder="Search" value="TYPE BUSINESS NAME HERE...">
+				        <input type="text" name="loc" class="form-control search" placeholder="Search" value="TYPE CITY HERE...">
 				    </div>
 				    <button type="submit" class="btn btn-default">Submit</button>
 				</form>
