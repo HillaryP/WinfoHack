@@ -35,8 +35,10 @@ form {
 }
 .search {
     padding:8px 15px;
-    background:rgba(50, 50, 50, 0.2);
-    border:0px solid #dbdbdb;
+    background-color: #878787;
+    border:1px solid #FFFFFF;
+    border-radius: 0px;
+    opacity: 0.5;
 }
 .button {
     position:relative;
