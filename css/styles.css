@@ -53,11 +53,13 @@ h1 {
     vertical-align: middle;
 }
 
-.text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
+.tagline {
+    font-family: "ProximaNovaAltThin";
+    margin: 10px;
+    text-align: none;
+    padding-left: 250px;
+    padding-right: 250px;
+    font-size: 40px;
 }
 
 
@@ -112,7 +114,7 @@ form {
     width: 100%;
     height: 400px;
     color: #fff;
-    background-color: #428bca;
+    background-color: #234360;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
