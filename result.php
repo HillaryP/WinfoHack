@@ -27,10 +27,12 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu dropdown-styling" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="1" href="#">50 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="2" href="#">100 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="3" href="#">200 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="3" href="#">500 years</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="1" onclick="make_map(0)">50 years</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="2" onclick="make_map(1)">100 years</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(2)">200 years</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(4)">300 years</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(9)">400 years</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(20)">500 years</a></li>
         </ul>
     </div>
 
@@ -44,19 +46,23 @@
 
         <script type="text/javascript">
           $(document).ready(function() {
-                var php_result = JSON.parse(<?php echo $result; ?>);
-                var base = "http://flood.firetree.net/?ll=";
-                var lon = php_result.location.coordinate.longitude;
-                var comma = ",";
-                var lat = php_result.location.coordinate.latitude;
-                var and = "&";
-                var zequal = "z=";
-                var z = "1";
-                var mequal = "m=";
-                var m = "2";
-                var type = "type=hybrid";
-                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type)
-                $("#map").attr("src", url)
+                function make_map(meter) {
+	                var php_result = JSON.parse(<?php echo $result; ?>);
+	                var base = "http://flood.firetree.net/?ll=";
+	                var lon = php_result.location.coordinate.longitude;
+	                var comma = ",";
+	                var lat = php_result.location.coordinate.latitude;
+	                var and = "&";
+	                var zequal = "z=";
+	                var z = "1";
+	                var mequal = "m=";
+	                var m = "" + meter;
+	                var type = "type=hybrid";
+	                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type)
+	                $("#map").attr("src", url)
+	            }
+
+	            make_map(10);
                 $("#info").append(php_result.name);
                 $("#info").append(php_result.location.cross_streets);
                 $("#info").append("<img src=\"" + php_result.image_url + "\" />");
