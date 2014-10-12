@@ -97,13 +97,14 @@
 	            <p style="font-size: 35px; font-weight: bold;" class="heading3">Causes of Rising Sea Levels</p>
 		        <p style="font-size: 25px;">Several things have contributed to the rising sea, but the two most important have to do with climate change. Thanks to heat-trapping greenhouse gases, especially carbon dioxide (CO2) pumped into the atmosphere by the burning of fossil fuels, global temperatures are more than one degree F higher than they were 100 years ago. Since water expands as it warms, the oceans take up more space than they once did, and the only direction they can expand are up and out. </p>
 		        <p style="font-size: 25px;"> Warmer temperatures also make glaciers and land-based ice sheets melt, and make tidewater glaciers — glaciers that reach the ocean — slide more rapidly into the sea and calve more icebergs. In both cases, water that had been trapped on land enters the ocean, in either solid or liquid form, making sea level rise even more. </p>
-				<p style="font-size: 25px;"> - See more at: http://sealevel.climatecentral.org/basics/causes#sthash.JLtYCdpK.dpuf</p>
+				<br>
+				<br>
+				<br>
+				<p style="font-size: 15px;"> - See more at: http://sealevel.climatecentral.org/basics/causes#sthash.JLtYCdpK.dpuf</p>
+				<p style="font-size: 15px;">Data leveraged from Alex Tingle </p>
+			 	<p style="font-size: 15px;">Causes cited from http://sealevel.climatecentral.org/</p>
 			</div>
         </aside>
-
-
-
-
     </body>
 </html>
 
