@@ -28,7 +28,14 @@
 
         <script type="text/javascript">
           $(document).ready(function() {
-                function make_map(meter) {
+                
+
+	            make_map(10);
+                $("#info").append(php_result.name);
+                $("#info").append(php_result.location.cross_streets);
+                $("#info").append("<img src=\"" + php_result.image_url + "\" />");
+          });
+          function make_map(meter) {
 	                var php_result = JSON.parse(<?php echo $result; ?>);
 	                var base = "http://flood.firetree.net/?ll=";
 	                var lon = php_result.location.coordinate.longitude;
@@ -43,12 +50,6 @@
 	                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type)
 	                $("#map").attr("src", url)
 	            }
-
-	            make_map(10);
-                $("#info").append(php_result.name);
-                $("#info").append(php_result.location.cross_streets);
-                $("#info").append("<img src=\"" + php_result.image_url + "\" />");
-          });
         </script>
 
 
@@ -60,17 +61,17 @@
 	            <span class="caret"></span>
 	        </button>
 	        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-	            <li role="presentation"><a role="menuitem" tabindex="1" href="javascript:make_map(0);">50 years</a></li>
-	            <li role="presentation"><a role="menuitem" tabindex="2" href="javascript:make_map(1);">100 years</a></li>
-	            <li role="presentation"><a role="menuitem" tabindex="3" href="javascript:make_map(2);">200 years</a></li>
-	            <li role="presentation"><a role="menuitem" tabindex="3" href="javascript:make_map(4);">300 years</a></li>
-	            <li role="presentation"><a role="menuitem" tabindex="3" href="javascript:make_map(9);">400 years</a></li>
-	            <li role="presentation"><a role="menuitem" tabindex="3" href="javascript:make_map(20);">500 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(0);">50 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(1);">100 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(2);">200 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(4);">300 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(9);">400 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(20);">500 years</a></li>
 
 	        </ul>
 	    </div>
 
-        <iframe align="middle" class="results-map" width="850" height="850" id="map">
+        <iframe class="results-map" width="1200" height="700" id="map">
         </iframe>
 
 
