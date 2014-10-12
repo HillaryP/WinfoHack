@@ -40,7 +40,6 @@
             $location = $_POST['loc'];
 
             $result = json_encode(query_api($term, $location));
-            echo $result;
         ?>
 
         <script type="text/javascript">
@@ -64,27 +63,8 @@
           });
         </script>
 
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <!-- column left & map --> 
-        <div class="span10">
-                <iframe class="results-map" width="600" height="600" id="map">
-                </iframe>
-        </div>
-
-
-        <!-- column right --> 
-    <div class="span2">
-            <!-- tip side -->
-            <div class="tips">
-                <p class="tagline">Prevention Tips</p>
-            </div>
-            <!-- tip end--> 
-        </div>
-      </div>
-
-    </div>
+        <iframe class="results-map" width="600" height="600" id="map">
+        </iframe>
 
 
     </body>
