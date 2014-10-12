@@ -124,9 +124,9 @@ form {
 .top_banner {
     display: table;
     width: 100%;
-    height: 400px;
+    height: 200px;
     color: #fff;
-    background-image: url('img/cover.jpg');
+    background-image: url('../img/img-bg3.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

@@ -12,7 +12,7 @@
  
     <body>
     	<?php include 'helper.php' ?>
-        <aside class="banner">
+        <aside class="top_banner">
             <div class="text-vertical-center">
                 <p class="tagline">INTERACTIVE MAP</p>
                 <p class="heading3">Select a future time and check out the sea level. </p>
@@ -38,17 +38,34 @@
           function make_map(meter) {
 	                var php_result = JSON.parse(<?php echo $result; ?>);
 	                var base = "http://flood.firetree.net/?ll=";
-	                var lon = php_result.location.coordinate.longitude;
-	                var comma = ",";
-	                var lat = php_result.location.coordinate.latitude;
-	                var and = "&";
-	                var zequal = "z=";
-	                var z = "1";
-	                var mequal = "m=";
-	                var m = "" + meter;
-	                var type = "type=hybrid";
-	                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type)
-	                $("#map").attr("src", url)
+	                if(php_result.location.coordinate !== undefined) {
+	                	var lon = php_result.location.coordinate.longitude;
+		                var comma = ",";
+		                var lat = php_result.location.coordinate.latitude;
+		                var and = "&";
+		                var zequal = "z=";
+		                var z = "1";
+		                var mequal = "m=";
+		                var m = "" + meter;
+		                var type = "type=hybrid";
+		                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type);
+		                $("#map").attr("src", url);
+	                } else {
+	                	alert("This business has opted out of making coordinate information available");
+		                var lon = "-122.3331";
+		                var comma = ",";
+		                var lat = "47.6097";
+		                var and = "&";
+		                var zequal = "z=";
+		                var z = "3";
+		                var mequal = "m=";
+		                var m = "" + meter;
+		                var type = "type=hybrid";
+		                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type);
+		                $("#map").attr("src", url);
+
+	                }
+
 	            }
         </script>
 
@@ -77,10 +94,10 @@
          <aside class="callout">
 	            
 	            <div class="causes" style="margin-left:20px; margin-right: 20px; padding:50px;">
-	            <p class="heading3">Causes of Rising Sea Levels</p>
-		        <p>Several things have contributed to the rising sea, but the two most important have to do with climate change. Thanks to heat-trapping greenhouse gases, especially carbon dioxide (CO2) pumped into the atmosphere by the burning of fossil fuels, global temperatures are more than one degree F higher than they were 100 years ago. Since water expands as it warms, the oceans take up more space than they once did, and the only direction they can expand are up and out. </p>
-		        <p>	Warmer temperatures also make glaciers and land-based ice sheets melt, and make tidewater glaciers — glaciers that reach the ocean — slide more rapidly into the sea and calve more icebergs. In both cases, water that had been trapped on land enters the ocean, in either solid or liquid form, making sea level rise even more. </p>
-				<p>- See more at: http://sealevel.climatecentral.org/basics/causes#sthash.JLtYCdpK.dpuf</p>
+	            <p style="font-size: 35px; font-weight: bold;" class="heading3">Causes of Rising Sea Levels</p>
+		        <p style="font-size: 25px;">Several things have contributed to the rising sea, but the two most important have to do with climate change. Thanks to heat-trapping greenhouse gases, especially carbon dioxide (CO2) pumped into the atmosphere by the burning of fossil fuels, global temperatures are more than one degree F higher than they were 100 years ago. Since water expands as it warms, the oceans take up more space than they once did, and the only direction they can expand are up and out. </p>
+		        <p style="font-size: 25px;"> Warmer temperatures also make glaciers and land-based ice sheets melt, and make tidewater glaciers — glaciers that reach the ocean — slide more rapidly into the sea and calve more icebergs. In both cases, water that had been trapped on land enters the ocean, in either solid or liquid form, making sea level rise even more. </p>
+				<p style="font-size: 25px;"> - See more at: http://sealevel.climatecentral.org/basics/causes#sthash.JLtYCdpK.dpuf</p>
 			</div>
         </aside>
 
