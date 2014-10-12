@@ -13,8 +13,6 @@
     <body>
     	<?php include 'helper.php' ?>
         <aside class="banner">
-            <img width="100" style="float:left; margin: 20px;" src="img/logo.png">
-            <p style = "font-size:20px; margin: 20px;">WASHED-UP</p>
             <div class="text-vertical-center">
                 <p class="tagline">INTERACTIVE MAP</p>
                 <p class="heading3">Select a future time and check out the sea level. </p>
