@@ -135,12 +135,18 @@ form {
 }
 
 .dropdown-styling {
-    padding: 20px;
+    padding: 20px
     margin: 20px;
 }
 
 .results-map {
     margin: 100px;
+}
+
+.dropdown {
+    margin-top: 3em;
+    margin-left:45%;
+    width: 100px;
 }
 
 
