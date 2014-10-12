@@ -70,6 +70,7 @@ form {
 }
 .search {
     padding:8px 15px;
+    height: 50px;
     border:1px solid #FFFFFF;
     border-radius: 0px;
     opacity: 0.5;
@@ -120,4 +121,6 @@ form {
     background-size: cover;
     -o-background-size: cover;
 }
+
+
 
