@@ -10,6 +10,8 @@
  
     <body>
         <aside class="banner">
+            <img width="100" style="float:left; margin: 20px;" src="img/logo.png">
+            <p style = "font-size:20px; margin: 20px;">WASHED-UP</p>
             <div class="text-vertical-center">
                 <p class="tagline">INTERACTIVE MAP</p>
                 <p class="heading3">Select a future time and check out the sea level. </p>
@@ -32,26 +34,38 @@
     </div>
 
 
-    <div class="container-fluid">
-      <div class="row-fluid">
+        <?php
+            $term = $_POST['business'];
+            $location = $_POST['loc'];
+
+            $result = json_encode(query_api($term, $location));
+            echo $result;
+        ?>
 
         <script type="text/javascript">
-            $(document).ready(function() {
+          $(document).ready(function() {
+                var php_result = JSON.parse(<?php echo $result; ?>);
                 var base = "http://flood.firetree.net/?ll=";
-                var lon = "29.9667";
+                var lon = php_result.location.coordinate.longitude;
                 var comma = ",";
-                var lat = "-90.0500";
+                var lat = php_result.location.coordinate.latitude;
                 var and = "&";
                 var zequal = "z=";
-                var z = "8";
+                var z = "1";
                 var mequal = "m=";
-                var m = "20";
+                var m = "2";
                 var type = "type=hybrid";
-                var url = base.concat(lon,comma,lat,and,zequal,z,and,mequal,m,and,type)
-                //var url = "http://flood.firetree.net/?ll=29.9667,-90.0500&zoom=9&m=9&type=hybrid";
+                var url = base.concat(lat,comma,lon,and,zequal,z,and,mequal,m,and,type)
                 $("#map").attr("src", url)
-            });
+                $("#info").append(php_result.name);
+                $("#info").append(php_result.location.cross_streets);
+                $("#info").append("<img src=\"" + php_result.image_url + "\" />");
+          });
         </script>
+        
+
+    <div class="container-fluid">
+      <div class="row-fluid">
         <!-- column left & map --> 
         <div class="span10">
                 <iframe class="results-map" width="600" height="600" id="map">
@@ -77,4 +91,4 @@
             <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     </body>
-    </html>
+</html>
