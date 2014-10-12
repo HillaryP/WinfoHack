@@ -19,24 +19,6 @@
             </div>
         </aside>
 
-    <!-- dropdown menu -->
-
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-            Dropdown
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu dropdown-styling" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="1" onclick="make_map(0)">50 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="2" onclick="make_map(1)">100 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(2)">200 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(4)">300 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(9)">400 years</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(20)">500 years</a></li>
-        </ul>
-    </div>
-
-
         <?php
             $term = $_POST['business'];
             $location = $_POST['loc'];
@@ -68,6 +50,24 @@
                 $("#info").append("<img src=\"" + php_result.image_url + "\" />");
           });
         </script>
+
+
+    	<!-- dropdown menu -->
+
+	    <div class="dropdown">
+	        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+	            Dropdown
+	            <span class="caret"></span>
+	        </button>
+	        <ul class="dropdown-menu dropdown-styling" role="menu" aria-labelledby="dropdownMenu1">
+	            <li role="presentation"><a role="menuitem" tabindex="1" onclick="make_map(0)">50 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="2" onclick="make_map(1)">100 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(2)">200 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(4)">300 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(9)">400 years</a></li>
+	            <li role="presentation"><a role="menuitem" tabindex="3" onclick="make_map(20)">500 years</a></li>
+	        </ul>
+	    </div>
 
         <iframe class="results-map" width="600" height="600" id="map">
         </iframe>
