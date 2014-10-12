@@ -57,10 +57,10 @@
 
 	    <div class="dropdown">
 	        <button class="btn btn-default dropdown-toggle dropdown-styling" type="button" id="dropdownMenu1" data-toggle="dropdown">
-	            Dropdown
+	            Select a future time below
 	            <span class="caret"></span>
 	        </button>
-	        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+	        <ul class="dropdown-menu dropdown-styling2" role="menu" aria-labelledby="dropdownMenu1">
 	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(0);">50 years</a></li>
 	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(1);">100 years</a></li>
 	            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:make_map(2);">200 years</a></li>
@@ -73,6 +73,18 @@
 
         <iframe class="results-map" width="1200" height="700" id="map">
         </iframe>
+
+         <aside class="callout">
+	            
+	            <div class="causes" style="margin-left:20px; margin-right: 20px; padding:50px;">
+	            <p class="heading3">Causes of Rising Sea Levels</p>
+		        <p>Several things have contributed to the rising sea, but the two most important have to do with climate change. Thanks to heat-trapping greenhouse gases, especially carbon dioxide (CO2) pumped into the atmosphere by the burning of fossil fuels, global temperatures are more than one degree F higher than they were 100 years ago. Since water expands as it warms, the oceans take up more space than they once did, and the only direction they can expand are up and out. </p>
+		        <p>	Warmer temperatures also make glaciers and land-based ice sheets melt, and make tidewater glaciers — glaciers that reach the ocean — slide more rapidly into the sea and calve more icebergs. In both cases, water that had been trapped on land enters the ocean, in either solid or liquid form, making sea level rise even more. </p>
+				<p>- See more at: http://sealevel.climatecentral.org/basics/causes#sthash.JLtYCdpK.dpuf</p>
+			</div>
+        </aside>
+
+
 
 
     </body>
