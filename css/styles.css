@@ -73,7 +73,6 @@ form {
     height: 50px;
     border:1px solid #FFFFFF;
     border-radius: 0px;
-    opacity: 0.5;
     font-size: 20px;
     color: white;
     background-color:rgba(0,0,0,0)
@@ -154,5 +153,9 @@ form {
     width: 100px;
 }
 
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
+}
 
 
